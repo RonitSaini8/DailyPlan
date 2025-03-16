@@ -65,15 +65,17 @@ export default function HomeScreen ({ navigation }) {
                         <Button 
                             title = "Delete"
                         />
-                        <Button
-                            title = "Note"
-                            onPress = {() => navigation.navigate('Notes')}
-                        />
                     </View>
                 </View>
             )}
                 keyExtractor={(item) => item.id}
             />
+            <TouchableOpacity 
+                style = {styles.add}
+                onPress = {() => navigation.navigate('Notes')}
+            >
+                <Text style = {styles.addText}>Add Note</Text>
+            </TouchableOpacity>
         </View>
     );
 };
